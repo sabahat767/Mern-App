@@ -57,6 +57,15 @@ window.location='/users';
                   </Button>
                   <Button 
                     variant="success"
+                    className="ml-2"
+                    size="sm"
+                    as={Link}
+                    to={"/single-user-update/" + item._id}
+                  >
+                    Update
+                  </Button>
+                  <Button 
+                    variant="success"
                     size="sm"
                     className="ml-2"
                    onClick={()=>handleDelete(item._id)} //_id databse wali id

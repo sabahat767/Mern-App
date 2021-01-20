@@ -1,11 +1,15 @@
+
 import React from "react";
 import { useEffect, useState } from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-
-const SingleUser = () => {
+import ReactDOM from "react-dom";
+import EditableText from "./EditableInput";
+const SingleUserUpdate = () => {
   const { id } = useParams();
   const [user, setUser] = useState(null);
+const [edit,setedit]=useState(false);
+console.log(edit)
 
   useEffect(() => {
     fetch("http://localhost:4000/api/users/" + id)
@@ -32,7 +36,8 @@ const SingleUser = () => {
             </Row>
             <Row>
               <Col className="col-headers">Name</Col>
-              <Col>{user?.name}</Col>
+              {/* <Col onClick={()=>setedit(true)}>{user?.name}</Col> */}
+              <EditableText text="Kaung Myat Lwin" />
             </Row>
             <Row>
               <Col className="col-headers">Email</Col>
@@ -50,4 +55,4 @@ const SingleUser = () => {
   );
 };
 
-export default SingleUser;
+export default SingleUserUpdate

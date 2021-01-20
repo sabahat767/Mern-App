@@ -32,11 +32,15 @@ const SinglePost = () => {
             </Row>
             <Row>
               <Col className="col-headers">Title</Col>
-              <Col>{singlePost?.title}</Col>
+              <Col><input type="text" name='title' value={singlePost?.title}/></Col>
+
+              {/* <Col>{singlePost?.title}</Col> */}
             </Row>
             <Row>
               <Col className="col-headers">Desc</Col>
-              <Col>{singlePost?.description}</Col>
+              <Col><input type="text" name='desc' value={singlePost?.description}/></Col>
+
+              {/* <Col>{singlePost?.description}</Col> */}
             </Row>
           </ListGroup.Item>
         </ListGroup>

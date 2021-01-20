@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import AddPost from "./components/AddPost";
 import Posts from "./components/Posts";
 import SinglePost from "./components/SinglePost";
+import SingleUserUpdate from "./components/SingleUserUpdate";
 function App() {
   return (
     <Router>
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/single-user/:id">
             <SingleUser />
+          </Route>
+          <Route path="/single-user-update/:id">
+            <SingleUserUpdate/>
           </Route>
           <Route path="/single-post/:id">
             <SinglePost />
