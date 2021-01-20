@@ -37,7 +37,7 @@ console.log(edit)
             <Row>
               <Col className="col-headers">Name</Col>
               {/* <Col onClick={()=>setedit(true)}>{user?.name}</Col> */}
-              <EditableText text="Kaung Myat Lwin" />
+              <EditableText text={user?.name} />
             </Row>
             <Row>
               <Col className="col-headers">Email</Col>
